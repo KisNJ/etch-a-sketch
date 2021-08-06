@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+#container {
+  width: 480px;
+  margin: 50px auto 50px auto;
+  display: grid;
+  grid-gap: 0px;
+  justify-content: center;
+  grid-template-rows: repeat(var(--grid-rows),0fr);
+  grid-template-columns: repeat(var(--grid-cols),0fr);
+  border: 1px solid #ddd;;
+  
+}
+
+.grid-item {
+  /*padding: 1em;*/
+  /*border: 1px solid #ddd;*/
+  /*min-height: 30px;
+  min-width: 30px;*/
+  text-align: center;
+  background-color: white;
+  
+}
+#gridshow{
+    margin-top: 15px;
+    background-color:rgba(255,255,255);
+}
+</style>
+<body>
+    <div id="top">
+        <button id="reset">
+            Reset
+        </button>
+        <div id="gridshow">
+
+        </div>
+    </div>
+
+    <div id="container">
+
+    </div>
+</body>
+<script src="main.js"></script> 
+</html>
