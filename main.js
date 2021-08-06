@@ -12,8 +12,11 @@ let gridItems=document.querySelectorAll(".grid-item");
     
 });
 function colorIT(e){
-    
-    this.style.backgroundColor="rgb("+220+","+220+","+200+")";
+    let value=this.getAttribute("data-over");
+    let addthis=parseInt(value)+1;
+    this.setAttribute("data-over",addthis);
+    let setthis=255-(addthis)*32;
+    this.style.backgroundColor="rgb("+setthis+","+setthis+","+setthis+")";
     /*this.style.backgroundColor="black";*/
     console.log(this.style.backgroundColor);
     
@@ -50,7 +53,9 @@ function makeRows(rows, cols) {
 
     cell.style.minHeight=(480/gridsize)+"px";
     cell.style.minWidth=(480/gridsize)+"px";
-    container.appendChild(cell).className = "grid-item";
+    cell.className="grid-item";
+    cell.setAttribute("data-over","0");
+    container.appendChild(cell);
   };
 };
 
